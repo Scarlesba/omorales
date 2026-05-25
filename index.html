@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Óscar Morales — Full Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(145deg, #cce8fb 0%, #ddf2ff 40%, #b8daf5 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card-main {
+      background: rgba(255, 255, 255, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 24px;
+      padding: 44px 48px 48px;
+      max-width: 720px;
+      width: 100%;
+      box-shadow: 0 8px 40px rgba(80, 150, 210, 0.13);
+    }
+
+    .title {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 600;
+      color: #0f2e4a;
+      margin-bottom: 22px;
+    }
+
+    .title span {
+      color: #2a85d0;
+    }
+
+    .body-text {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: #1e4a70;
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+
+    .body-text span {
+      color: #2a85d0;
+      font-weight: 400;
+    }
+
+    .contact-section {
+      margin-bottom: 36px;
+    }
+
+    .contact-label {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: #1e4a70;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      height: 40px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: #fff;
+      background: #2a85d0;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 2px 10px rgba(42,133,208,0.25);
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: #1a6ab8;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(42,133,208,0.35);
+    }
+
+    .btn svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+      fill: #fff;
+    }
+
+    /* Projects */
+    .projects-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #2a85d0;
+      margin-bottom: 16px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.38);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 16px;
+      padding: 28px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 120px;
+      text-decoration: none;
+      transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+      box-shadow: 0 2px 12px rgba(80,150,210,0.07);
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.58);
+      box-shadow: 0 10px 28px rgba(80,150,210,0.15);
+    }
+
+    .project-card img {
+      max-width: 100%;
+      max-height: 52px;
+      object-fit: contain;
+      filter: saturate(0.85) opacity(0.88);
+      transition: filter 0.22s;
+    }
+    .project-card:hover img { filter: saturate(1) opacity(1); }
+
+    .project-card .fallback {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #0f2e4a;
+      text-align: center;
+    }
+
+    @media (max-width: 540px) {
+      .card-main { padding: 32px 24px 36px; }
+      .projects { grid-template-columns: 1fr; }
+      .buttons { flex-direction: column; }
+      .btn { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-main">
+    <h1 class="title">Work is in <span>progress</span></h1>
+
+    <p class="body-text" style="margin-bottom:6px;">
+      <span>Projects</span>, things about me and all sort of information that will give you a better understanding of the type of person I am is being added and will appear shortly.
+    </p>
+    <p class="body-text" style="margin-bottom:28px;">
+      In the meantime, feel free to check my last three projects I've collaborated on below.
+    </p>
+
+    <div class="contact-section">
+      <p class="contact-label">Or reach out — I'm always open to a conversation.</p>
+      <div class="buttons">
+
+        <!-- WhatsApp -->
+        <a class="btn" href="https://wa.me/34684357890" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          WhatsApp
+        </a>
+
+        <!-- Email -->
+        <a class="btn" href="mailto:scarlesva@gmail.com">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          Email
+        </a>
+
+        <!-- Phone -->
+        <a class="btn" href="tel:+34684357890">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          +34 684 35 78 90
+        </a>
+
+        <!-- LinkedIn -->
+        <a class="btn" href="https://www.linkedin.com/in/%C3%B3scar-morales-541965388/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+
+      </div>
+    </div>
+
+    <p class="projects-label">Projects I've collaborated on</p>
+    <div class="projects">
+      <a class="project-card" href="https://www.absoluteprestige.com/" target="_blank" rel="noopener">
+        <img src="https://www.absoluteprestige.com/wp-content/uploads/2022/02/absolute-prestige-logo.png" alt="Absolute Prestige"
+             onerror="this.style.display='none';this.parentElement.querySelector('.fallback').style.display='block';" />
+        <span class="fallback" style="display:none;">Absolute Prestige</span>
+      </a>
+      <a class="project-card" href="https://www.atelierramsay.com/" target="_blank" rel="noopener">
+        <img src="https://www.atelierramsay.com/wp-content/uploads/2023/01/atelier-ramsay-logo.png" alt="Atelier Ramsay"
+             onerror="this.style.display='none';this.parentElement.querySelector('.fallback').style.display='block';" />
+        <span class="fallback" style="display:none;">Atelier Ramsay</span>
+      </a>
+      <a class="project-card" href="https://www.mitchellspp.com/" target="_blank" rel="noopener">
+        <img src="https://www.mitchellspp.com/wp-content/uploads/mitchells-logo.png" alt="Mitchell's Prestige Properties"
+             onerror="this.style.display='none';this.parentElement.querySelector('.fallback').style.display='block';" />
+        <span class="fallback" style="display:none;">Mitchell's PP</span>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
